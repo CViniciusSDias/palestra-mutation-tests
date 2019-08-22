@@ -27,4 +27,11 @@ class CalculadoraDeImpostosTest extends TestCase
         $imposto = $this->calculadora->calcula($hd);
         self::assertEquals(0, $imposto);
     }
+
+    public function testCalculaImpostoDeProdutoDe500Reais()
+    {
+        $ssd = new Produto(500);
+        $imposto = $this->calculadora->calcula($ssd);
+        self::assertEquals(0, $imposto);
+    }
 }
