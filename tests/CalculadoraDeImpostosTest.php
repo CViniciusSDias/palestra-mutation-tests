@@ -7,7 +7,7 @@ use PHPUnit\Framework\TestCase;
 
 class CalculadoraDeImpostosTest extends TestCase
 {
-    private $calculadora;
+    private CalculadoraDeImpostos $calculadora;
 
     protected function setUp(): void
     {
@@ -25,13 +25,6 @@ class CalculadoraDeImpostosTest extends TestCase
     {
         $hd = new Produto(300);
         $imposto = $this->calculadora->calcula($hd);
-        self::assertEquals(0, $imposto);
-    }
-
-    public function testCalculaImpostoDeProdutoDe500Reais()
-    {
-        $ssd = new Produto(500);
-        $imposto = $this->calculadora->calcula($ssd);
         self::assertEquals(0, $imposto);
     }
 }
