@@ -2,17 +2,9 @@
 
 namespace Meu\Projeto;
 
-class Produto
+readonly class Produto
 {
-    private $preco;
-
-    public function __construct(float $preco)
+    public function __construct(public float $preco)
     {
-        $this->preco = $preco;
-    }
-
-    public function recuperarPreco(): float
-    {
-        return $this->preco;
     }
 }

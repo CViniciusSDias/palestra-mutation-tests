@@ -1,6 +1,10 @@
 vendor/
 .idea/
+.phpunit.cache
 .phpunit.result.cache
 infection.log
 per-mutator.md
 summary.log
+infection.html
+infection-log.json
+summary.json
